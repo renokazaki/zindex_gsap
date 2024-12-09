@@ -1,7 +1,13 @@
+import CanvasContainer from "./Components/CanvasContaier";
+
 function App() {
   return (
     <>
-      <div className="bg-black">hello </div>
+      <div className="h-screen w-full">
+        <div className="fixed  w-full h-full ">
+          <CanvasContainer />
+        </div>
+      </div>
     </>
   );
 }
