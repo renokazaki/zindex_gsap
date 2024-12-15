@@ -1,4 +1,4 @@
-import { Scroll, useScroll } from "@react-three/drei";
+import { useScroll } from "@react-three/drei";
 import { useRef } from "react";
 
 import Mew from "../../public/Model/Mew";
@@ -27,21 +27,32 @@ export const Experience = () => {
       <Mew scale={0.5} />
 
       <group ref={sceneContainer}>
-        <Tree position={[-2, 1, 0]} />
-        <group position={[-2.5, 2, 0]}>
-          <Tree position={[-2, 0, 0]} />
-        </group>
-        <group position-z={SECTIONS_DISTANCE} position={[2.3, 2, 0]}>
-          <Tree position={[2, 0, 0]} />
+        <group position={[-3.5, 2, 2]}>
+          <Tree position={[-1, 0, 2]} />
+          <Tree position={[8, 0, 2]} />
         </group>
         <group position-z={2 * SECTIONS_DISTANCE} position={[-1.5, -3, 0]}>
-          <Tree position={[-1, 4, 0]} />
+          <Tree position={[-1, 4, -4]} />
+        </group>
+        <group
+          position-z={3 * SECTIONS_DISTANCE}
+          position={[3.3, -3, -5]}
+        ></group>
+        <group position={[-2.5, 2, 0]}>
+          <Tree position={[2, 0, -3]} />
+        </group>
+        <group position-z={SECTIONS_DISTANCE} position={[2.3, 2, 0]}>
+          <Tree position={[2, 0, 2]} />
+        </group>
+        <group position-z={2 * SECTIONS_DISTANCE} position={[-1.5, -3, 0]}>
+          <Tree position={[4, 4, 0]} />
         </group>
         <group position-z={3 * SECTIONS_DISTANCE} position={[3.3, -3, 0]}>
-          <Tree position={[-1, 4, 0]} />
+          <Tree position={[1, 4, -2]} />
+          <Tree position={[-7, 4, -4]} />
         </group>
       </group>
-      <Scroll html>
+      {/* <Scroll html>
         <h1
           style={{ position: "absolute", top: "0vh" }}
           className="page1 text-[10rem]  font-black text-gray-900"
@@ -66,7 +77,7 @@ export const Experience = () => {
         >
           04
         </h1>
-      </Scroll>
+      </Scroll> */}
     </>
   );
 };
