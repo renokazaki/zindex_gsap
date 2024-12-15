@@ -42,23 +42,29 @@ export const Experience = () => {
         </group>
       </group>
       <Scroll html>
-        <h1 style={{ position: "absolute", top: "0vh" }} className="page1">
-          Page1
+        <h1
+          style={{ position: "absolute", top: "0vh" }}
+          className="page1 text-[10rem]  font-black text-gray-900"
+        >
+          01
         </h1>
         <h1
-          style={{ position: "absolute", top: "100vh", left: "90vw" }}
-          className="page2"
+          style={{ position: "absolute", top: "100vh" }}
+          className="page2 text-[10rem]  font-black text-gray-900"
         >
-          Page2
-        </h1>
-        <h1 style={{ position: "absolute", top: "200vh" }} className="page3">
-          Page1
+          02
         </h1>
         <h1
-          style={{ position: "absolute", top: "300vh", left: "90vw" }}
-          className="page4"
+          style={{ position: "absolute", top: "200vh" }}
+          className="page3 text-[10rem]  font-black text-gray-900"
         >
-          Page2
+          03
+        </h1>
+        <h1
+          style={{ position: "absolute", top: "300vh" }}
+          className="page4 text-[10rem]  font-black text-gray-900"
+        >
+          04
         </h1>
       </Scroll>
     </>
