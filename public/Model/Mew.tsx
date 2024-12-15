@@ -27,7 +27,7 @@ const Mew: React.FC<JSX.IntrinsicElements["group"]> = (props) => {
     const action = actions["Take 001"];
 
     if (action) {
-      action.timeScale = 0.4; // アニメーション速度を調整
+      action.timeScale = 0.7; // アニメーション速度を調整
       action.play();
     }
   }, [actions]);
@@ -35,7 +35,7 @@ const Mew: React.FC<JSX.IntrinsicElements["group"]> = (props) => {
   return (
     <group ref={group} {...props}>
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2 + 0.5, 0, 0]}>
           <group
             name="75afd621d7d146fda0d38fe0b2c7af9dfbx"
             rotation={[Math.PI / 2, 0, 0]}
