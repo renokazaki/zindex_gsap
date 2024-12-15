@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 
-import { ScrollControls } from "@react-three/drei";
+import { Environment, ScrollControls } from "@react-three/drei";
 import { Experience } from "./Experience";
 
 const CanvasContainer = () => {
@@ -16,6 +16,7 @@ const CanvasContainer = () => {
         }}
       >
         <ambientLight intensity={3} />
+        <Environment preset="forest" />
         <ScrollControls pages={4} damping={0.1} maxSpeed={0.5}>
           <Experience />
         </ScrollControls>

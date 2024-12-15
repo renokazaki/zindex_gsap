@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
-import gsap from "gsap";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -24,23 +23,11 @@ const Mew: React.FC<JSX.IntrinsicElements["group"]> = (props) => {
   ) as GLTFResult;
   const { actions } = useAnimations(animations, group);
 
-  const tl = gsap.timeline();
-
-  useEffect(() => {
-    tl.to(group.current.position, {
-      x: 1,
-      y: -2,
-      z: -2,
-      duration: 1, // スムーズな移動
-      immediateRender: false, // スクロール前にリセットしない
-    });
-  }, []);
-
   useEffect(() => {
     const action = actions["Take 001"];
 
     if (action) {
-      action.timeScale = 0.2; // アニメーション速度を調整
+      action.timeScale = 0.4; // アニメーション速度を調整
       action.play();
     }
   }, [actions]);
